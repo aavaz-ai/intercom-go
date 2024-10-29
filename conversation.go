@@ -25,6 +25,12 @@ type Conversation struct {
 	TagList             *TagList               `json:"tags"`
 	State               string                 `json:"state,omitempty"`
 	CustomAttributes    map[string]interface{} `json:"custom_attributes,omitempty"`
+	ConversationRating  *ConversationRating    `json:"conversation_rating,omitempty"`
+}
+
+type ConversationRating struct {
+	Rating int    `json:"rating"`
+	Remark string `json:"remark"`
 }
 
 // A ConversationMessage is the message that started the conversation rendered for presentation
